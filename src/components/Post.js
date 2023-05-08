@@ -26,7 +26,11 @@ function Post({
     }
 
     function clickPost(){
-      if (heart === "heart-outline") setHeart ("heart");
+      if (heart === "heart-outline") {
+        setHeart ("heart");
+        setLike (quantity+1);
+      }
+      
     }
 
     return(
@@ -48,7 +52,7 @@ function Post({
           <div className="fundo">
             <div className="acoes">
               <div>
-                <ion-icon data-test="like-post" onClick={changeHeart} class={heart ? "vermelho" : "cinza"} name={heart} ></ion-icon>
+                <ion-icon data-test="like-post" onClick={changeHeart} class={heart == "heart"? "vermelho" : ""} name={heart} ></ion-icon>
                 <ion-icon name="chatbubble-outline"></ion-icon>
                 <ion-icon name="paper-plane-outline"></ion-icon>
               </div>

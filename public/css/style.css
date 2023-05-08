@@ -196,9 +196,7 @@ body {
   color: grey;
 }
 
-.post .fundo .acoes ion-icon.vermelho {
-  color: red;
-}
+
 
 
 .post .fundo .curtidas {
@@ -307,6 +305,7 @@ body {
 
 ion-icon {
   visibility: visible;
+ 
 }
 
 .usuario ion-icon {
@@ -315,3 +314,6 @@ ion-icon {
   color: black;
 }
 
+ion-icon.vermelho {
+  color: red;
+}
