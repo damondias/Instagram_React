@@ -21,7 +21,7 @@ function Post({
        setLike (quantity+1);
       } else {
         setHeart ("heart-outline");
-        setLike (quantity-1);
+        setLike (quantity);
       }
     }
 
@@ -48,7 +48,7 @@ function Post({
           <div className="fundo">
             <div className="acoes">
               <div>
-                <ion-icon onClick={changeHeart} name={heart} ></ion-icon>
+                <ion-icon onClick={changeHeart} class={heart ? "vermelho" : "cinza"} name={heart} ></ion-icon>
                 <ion-icon name="chatbubble-outline"></ion-icon>
                 <ion-icon name="paper-plane-outline"></ion-icon>
               </div>

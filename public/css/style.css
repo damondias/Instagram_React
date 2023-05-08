@@ -189,7 +189,17 @@ body {
 
 .post .fundo .acoes div:first-child ion-icon {
   margin-right: 6px;
+  
 }
+
+.post .fundo .acoes ion-icon.cinza {
+  color: grey;
+}
+
+.post .fundo .acoes ion-icon.vermelho {
+  color: red;
+}
+
 
 .post .fundo .curtidas {
   display: flex;
