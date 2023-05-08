@@ -10,7 +10,7 @@ const posts = [
     likeds: {
       follower: "respondeai",
       imageFollower: "respondeai.svg",
-      quantity: "101.523"
+      quantity: 101523
     }
   },
   {
@@ -22,7 +22,7 @@ const posts = [
     likeds: {
       follower: "adorable_animals",
       imageFollower: "adorable_animals.svg",
-      quantity: "99.159"
+      quantity: 99159
     }
   },
 ]

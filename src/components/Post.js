@@ -1,8 +1,34 @@
+import { useState } from "react";
+
 function Post({
     user: { image, name },
     content,
     likeds: { follower, imageFollower, quantity }
 }){
+    let [bookmark, setBookmark] = useState("bookmark-outline"); 
+    let [heart, setHeart] = useState("heart-outline"); 
+    let [like, setLike] = useState(quantity);
+
+    function changeBookmark() {
+       if (bookmark === "bookmark-outline"){
+        setBookmark ("bookmark");
+       } else setBookmark ("bookmark-outline");
+    }
+
+    function changeHeart() {
+      if (heart === "heart-outline"){
+       setHeart ("heart");
+       setLike (quantity+1);
+      } else {
+        setHeart ("heart-outline");
+        setLike (quantity-1);
+      }
+    }
+
+    function clickPost(){
+      if (heart === "heart-outline") setHeart ("heart");
+    }
+
     return(
         <div className="post">
           <div className="topo">
@@ -16,25 +42,25 @@ function Post({
           </div>
 
           <div className="conteudo">
-            <img src={`assets/img/${content}`} alt="imagem" />
+            <img onClick={clickPost} src={`assets/img/${content}`} alt="imagem" />
           </div>
 
           <div className="fundo">
             <div className="acoes">
               <div>
-                <ion-icon name="heart-outline"></ion-icon>
+                <ion-icon onClick={changeHeart} name={heart} ></ion-icon>
                 <ion-icon name="chatbubble-outline"></ion-icon>
                 <ion-icon name="paper-plane-outline"></ion-icon>
               </div>
               <div>
-                <ion-icon name="bookmark-outline"></ion-icon>
+                <ion-icon onClick={changeBookmark} name={bookmark}></ion-icon>
               </div>
             </div>
 
             <div className="curtidas">
               <img src= {`assets/img/${imageFollower}`} alt={follower}/>
               <div className="texto">
-                Curtido por <strong>{follower}</strong> e <strong>outras {quantity} pessoas</strong>
+                Curtido por <strong>{follower}</strong> e <strong>outras {like} pessoas</strong>
               </div>
             </div>
           </div>
