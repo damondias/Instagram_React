@@ -13,14 +13,14 @@ const stories = [
 
 function Stories(){
     return(
-        <div class="stories">
+        <div className="stories">
             {
                 stories.map(story => { 
-                   return <Story image={story.image} user={story.user}/>
+                   return <Story key={story.user} image={story.image} user={story.user}/>
                 })
             }
 
-        <div class="setinha">
+        <div className="setinha">
           <ion-icon name="chevron-forward-circle"></ion-icon>
         </div>
         </div>
