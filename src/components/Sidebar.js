@@ -18,11 +18,11 @@ function Sidebar(){
     return(
         <div class="sidebar">
             <div class="usuario">
-                <img onClick={changeImage} src={image} alt="imagem de perfil"/>
+                <img data-test="profile-image" onClick={changeImage} src={image} alt="imagem de perfil"/>
                 <div class="texto">
                 <span>
-                    <strong>{name}</strong>
-                    <ion-icon onClick={changeName} name="pencil"></ion-icon>
+                    <strong data-test="name" >{name}</strong>
+                    <ion-icon onClick={changeName} name="pencil" data-test="edit-name"></ion-icon>
                 </span>
                 </div>
             </div>

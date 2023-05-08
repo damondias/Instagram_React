@@ -30,7 +30,7 @@ function Post({
     }
 
     return(
-        <div className="post">
+        <div data-test="post" className="post">
           <div className="topo">
             <div className="usuario">
               <img src={`assets/img/${image}`} alt={name}/>
@@ -42,25 +42,25 @@ function Post({
           </div>
 
           <div className="conteudo">
-            <img onClick={clickPost} src={`assets/img/${content}`} alt="imagem" />
+            <img data-test="post-image" onClick={clickPost} src={`assets/img/${content}`} alt="imagem" />
           </div>
 
           <div className="fundo">
             <div className="acoes">
               <div>
-                <ion-icon onClick={changeHeart} class={heart ? "vermelho" : "cinza"} name={heart} ></ion-icon>
+                <ion-icon data-test="like-post" onClick={changeHeart} class={heart ? "vermelho" : "cinza"} name={heart} ></ion-icon>
                 <ion-icon name="chatbubble-outline"></ion-icon>
                 <ion-icon name="paper-plane-outline"></ion-icon>
               </div>
               <div>
-                <ion-icon onClick={changeBookmark} name={bookmark}></ion-icon>
+                <ion-icon data-test="save-post" onClick={changeBookmark} name={bookmark}></ion-icon>
               </div>
             </div>
 
             <div className="curtidas">
               <img src= {`assets/img/${imageFollower}`} alt={follower}/>
               <div className="texto">
-                Curtido por <strong>{follower}</strong> e <strong>outras {like} pessoas</strong>
+                Curtido por <strong>{follower}</strong> e <strong data-test="likes-number">outras {like} pessoas</strong>
               </div>
             </div>
           </div>

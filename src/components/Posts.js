@@ -25,6 +25,30 @@ const posts = [
       quantity: 99159
     }
   },
+  {
+    user: {
+      name: "meowed",
+      image: "meowed.svg",
+    },
+    content: "gato-telefone.svg",
+    likeds: {
+      follower: "respondeai",
+      imageFollower: "respondeai.svg",
+      quantity: 101523
+    }
+  },
+  {
+    user: {
+      name: "barked",
+      image: "barked.svg",
+    },
+    content: "dog.svg",
+    likeds: {
+      follower: "adorable_animals",
+      imageFollower: "adorable_animals.svg",
+      quantity: 99159
+    }
+  },
 ]
 
 function Posts(){
